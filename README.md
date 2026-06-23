@@ -161,7 +161,7 @@ Seam class suffered from severe class imbalance in v1. Run 2 applied targeted ov
 | mAP50 | 0.7891 | **0.8425** |
 | Model | YOLOv8m | YOLOv8m |
 | Seam Recall | Low | Improved |
-| Epochs | 50 | 50 |
+| Epochs | 50 | 70 |
 | Hardware | Kaggle T4 GPU | Kaggle T4 GPU |
 
 ### v2 Approximate Per-Class mAP50
