@@ -1,0 +1,11 @@
+names:
+- Stain
+- Thread
+- Warp_Weft
+- hole
+- seam
+nc: 5
+path: /kaggle/input/datasets/singertv/fabric-processed/processed
+test: images/test
+train: images/train
+val: images/val

@@ -1,0 +1,13 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.git/
+.gitignore
+*.md
+.streamlit/secrets.toml
+sample_images/
+.env
+*.log
+runs/
+.ipynb_checkpoints/

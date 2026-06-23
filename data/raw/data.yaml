@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 5
+names: ['Stain', 'Thread', 'Warp_Weft', 'hole', 'seam']
+
+roboflow:
+  workspace: yolo-defect-detection
+  project: fabric-defect-detection_2025-tw6ok
+  version: 11
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/yolo-defect-detection/fabric-defect-detection_2025-tw6ok/dataset/11
