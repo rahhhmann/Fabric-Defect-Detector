@@ -33,7 +33,7 @@ def check_api_health():
     still picking up a backend restart within a few seconds.
     """
     try:
-        resp = requests.get(f"{API_URL}/health", timeout=3)
+        resp = requests.get(f"{API_URL}/health", timeout=10)
         if resp.status_code == 200:
             return True, resp.json()
         return False, None
@@ -50,7 +50,7 @@ def call_predict(file_bytes: bytes, filename: str, content_type: str) -> dict:
     or merge logic locally.
     """
     files = {"file": (filename, file_bytes, content_type)}
-    resp = requests.post(f"{API_URL}/predict", files=files, timeout=30)
+    resp = requests.post(f"{API_URL}/predict", files=files, timeout=120)
     resp.raise_for_status()
     return resp.json()
 
@@ -64,7 +64,7 @@ def call_predict_annotated(file_bytes: bytes, filename: str, content_type: str) 
     the backend's box colors.
     """
     files = {"file": (filename, file_bytes, content_type)}
-    resp = requests.post(f"{API_URL}/predict/annotated", files=files, timeout=30)
+    resp = requests.post(f"{API_URL}/predict/annotated", files=files, timeout=120)
     resp.raise_for_status()
     return resp.content
 
